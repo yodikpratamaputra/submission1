@@ -16,13 +16,12 @@ class DetailActivity : AppCompatActivity() {
     lateinit var imgImageView : ImageView
     lateinit var descTextView : TextView
 
-    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val intent = intent
-        val  name = intent.getStringExtra("name")
-        val image = intent.getIntExtra("image", 0)
-        val desc = intent.getStringExtra("desc")
+        var  name = intent.getStringExtra("name")
+        var image = intent.getIntExtra("image", 0)
+        var desc = intent.getStringExtra("desc")
 
 
 
@@ -54,7 +53,7 @@ class DetailActivity : AppCompatActivity() {
 
             linearLayout{
                 imageView{
-                    setImageResource(R.drawable.img_madrid)
+                    setImageResource(R.drawable.img_gdk)
                 }.lparams(width = dip(250), height = matchParent){
                     gravity = Gravity.CENTER or Gravity.BOTTOM
                 }
